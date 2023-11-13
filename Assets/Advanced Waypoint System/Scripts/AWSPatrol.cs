@@ -130,7 +130,7 @@ namespace Worq
         void Update()
         {
 
-            playAnimation(agent.velocity.magnitude>.1f?1:0);
+            
             if(!IsPatrolling) { return; }
             if (resetPatrol || reset)
             {
@@ -227,17 +227,6 @@ namespace Worq
             goToNextPointDirect();
         }
 
-        private void playAnimation(float _value, float _dampTime = .1f)
-        {
-            if (!hasAnimator()) { return; }
-            anim.SetFloat("Speed", _value, _dampTime, Time.deltaTime);
-        }
-        private bool hasAnimator()
-        {
-            if (anim != null) { return true; }
-            Debug.LogWarning("There is no Animator Component!");
-            return false;
-        }
 
         public void ResetPatrol()
         {

@@ -56,7 +56,7 @@ namespace Overtime.FSM
 			}
 		}
 
-		private bool m_Debug = false;
+		private bool m_Debug = true;
 		public bool Debug
 		{
 			get { return m_Debug; }
